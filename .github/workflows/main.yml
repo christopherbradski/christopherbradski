@@ -1,0 +1,21 @@
+# Lets get started with Github self hosted runners, because why not.
+
+name: ci
+
+# Set the controls/hooks that we'll run on
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  # This allows us to run the task from the actions tab in GH.
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: local-runner
+    steps:
+      - name: test_then_publish
+        run: echo testing is great
