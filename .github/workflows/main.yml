@@ -7,7 +7,7 @@ name: ci
 on:
   push:
     branches: [main]
-  pull_request:
+  pull_request_target:
     branches: [main]
 
   # This allows us to run the task from the actions tab in GH.
